@@ -8,7 +8,7 @@ export default function SpecTable({ items }: SpecTableProps) {
       {items.map(({ label, value }) => (
         <div
           key={label}
-          className="flex flex-col gap-1 p-4 rounded-xl bg-white border border-line"
+          className="flex flex-col gap-1 p-4 rounded-xl bg-white border border-stroke"
         >
           <span className="text-xs font-semibold text-gold uppercase tracking-wide">
             {label}
