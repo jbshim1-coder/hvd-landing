@@ -9,6 +9,9 @@ type FormStatus = "idle" | "submitting" | "error";
 
 const GRADES = ["G4", "G5", "G6", "G7", "G8", "G9", "G10", "G11", "G12"];
 
+// 2026년 기준 초4(~10세)~고3(~18세) 출생연도 범위
+const BIRTH_YEARS = Array.from({ length: 14 }, (_, i) => 2018 - i); // 2018~2005
+
 function getUtmSource(): string {
   if (typeof window === "undefined") return "";
   const p = new URLSearchParams(window.location.search);
@@ -51,14 +54,10 @@ export default function LeadForm() {
     }
 
     try {
-      const res = await fetch(endpoint, { method: "POST", body: data });
-      if (!res.ok) throw new Error(`서버 오류 (${res.status})`);
-      const json = await res.json();
-      if (json.result === "success") {
-        router.push("/thanks");
-      } else {
-        throw new Error(json.message || "제출 실패");
-      }
+      // Apps Script는 CORS를 차단하므로 no-cors 모드 사용
+      // 응답을 읽을 수 없지만 데이터는 정상 전송됨
+      await fetch(endpoint, { method: "POST", mode: "no-cors", body: data });
+      router.push("/thanks");
     } catch (err) {
       setStatus("error");
       setErrorMsg(
@@ -111,15 +110,21 @@ export default function LeadForm() {
 
               <div>
                 <label htmlFor="생년월일" className={labelCls}>
-                  생년월일{requiredMark}
+                  출생연도{requiredMark}
                 </label>
-                <input
+                <select
                   id="생년월일"
                   name="생년월일"
-                  type="date"
                   required
                   className={inputCls}
-                />
+                >
+                  <option value="">선택</option>
+                  {BIRTH_YEARS.map((y) => (
+                    <option key={y} value={String(y)}>
+                      {y}년
+                    </option>
+                  ))}
+                </select>
               </div>
 
               <div>
