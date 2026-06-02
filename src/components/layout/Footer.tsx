@@ -5,13 +5,20 @@ export default function Footer() {
   return (
     <footer className="bg-ink text-white/70 py-12">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="mb-8">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-6 mb-8">
           <Image
             src={ASSETS.logo}
             alt="Harvard Debate Council Summer Workshop in Korea"
-            width={140}
-            height={36}
-            className="h-8 w-auto object-contain brightness-0 invert opacity-80"
+            width={160}
+            height={41}
+            className="h-10 w-auto object-contain brightness-0 invert opacity-90"
+          />
+          <Image
+            src={ASSETS.partnerLogos}
+            alt="ASDA KOREA · YBM EDU 파트너 로고"
+            width={300}
+            height={109}
+            className="h-14 w-auto object-contain brightness-0 invert opacity-90"
           />
         </div>
 

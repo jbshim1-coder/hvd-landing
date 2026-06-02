@@ -24,10 +24,10 @@ export default function HarvardDiffSection() {
           </a>
           <Image
             src={ASSETS.partnerLogos}
-            alt="Harvard Debate Council · ASDA KOREA · YBM 파트너 로고"
-            width={280}
-            height={102}
-            className="h-10 w-auto object-contain brightness-0 invert opacity-80"
+            alt="ASDA KOREA · YBM EDU 파트너 로고"
+            width={350}
+            height={127}
+            className="h-16 w-auto object-contain brightness-0 invert"
           />
         </div>
       </div>
