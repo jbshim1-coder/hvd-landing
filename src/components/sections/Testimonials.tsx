@@ -15,7 +15,7 @@ export default function Testimonials() {
           {SOCIAL_PROOF.items.map((item) => (
             <figure
               key={item.source}
-              className="flex flex-col gap-4 p-6 bg-white rounded-xl border border-line"
+              className="flex flex-col gap-4 p-6 bg-white rounded-xl border border-stroke"
             >
               <span className="text-3xl text-gold/40 font-serif leading-none">
                 &ldquo;

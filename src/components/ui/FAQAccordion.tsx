@@ -9,7 +9,7 @@ interface FAQAccordionProps {
 
 export default function FAQAccordion({ items }: FAQAccordionProps) {
   return (
-    <div className="divide-y divide-line border border-line rounded-xl overflow-hidden">
+    <div className="divide-y divide-stroke border border-stroke rounded-xl overflow-hidden">
       {items.map((item) => (
         <div key={item.q}>
           <div className="px-5 py-4 bg-white">

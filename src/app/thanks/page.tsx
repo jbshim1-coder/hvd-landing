@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ThanksPage() {
   return (
-    <div className="min-h-dvh bg-bg flex flex-col items-center justify-center px-4 py-16">
+    <div className="min-h-dvh bg-white flex flex-col items-center justify-center px-4 py-16">
       <div className="max-w-md w-full flex flex-col items-center gap-8 text-center">
         <Image
           src={ASSETS.logo}

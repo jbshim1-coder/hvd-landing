@@ -9,7 +9,9 @@
   --color-ink: #1c1c1e;
   --color-muted: #6b6b70;
   --color-line: #e7e3da;
+  --color-stroke: #7c776f;
   --color-bg: #fbf9f4;
+  --color-surface: #e4dfd3;
 
   --font-sans: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, sans-serif;
