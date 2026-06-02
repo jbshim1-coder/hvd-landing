@@ -72,15 +72,17 @@ export default function LeadForm() {
   const requiredMark = <span className="text-crimson ml-0.5">*</span>;
 
   return (
-    <section id="apply" className="bg-bg py-16 sm:py-20 scroll-mt-16">
+    <section id="apply" className="bg-crimson py-16 sm:py-20 scroll-mt-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <SectionIntro
           eyebrow={LEAD_FORM.eyebrow}
           headline={LEAD_FORM.headline}
           body={LEAD_FORM.subtext}
+          light
         />
-        <p className="mt-2 text-xs text-muted">{LEAD_FORM.notice}</p>
+        <p className="mt-2 text-xs text-white/60">{LEAD_FORM.notice}</p>
 
+        <div className="mt-8 bg-white rounded-2xl border-2 border-gold/40 shadow-xl p-6 sm:p-8">
         <form
           onSubmit={handleSubmit}
           noValidate
@@ -345,6 +347,7 @@ export default function LeadForm() {
             {status === "submitting" ? "신청 중…" : LEAD_FORM.cta}
           </button>
         </form>
+        </div>
       </div>
     </section>
   );

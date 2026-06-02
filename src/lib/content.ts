@@ -3,7 +3,6 @@
 export const LINKS = {
   applyForm: "#apply",
   seminarForm: "https://forms.gle/oxCrL1n9SMxyzoh7A",
-  kakao: "http://pf.kakao.com/_IhxgKX/chat",
 } as const;
 
 export const ASSETS = {
