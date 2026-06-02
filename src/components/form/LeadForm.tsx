@@ -9,8 +9,8 @@ type FormStatus = "idle" | "submitting" | "error";
 
 const GRADES = ["G4", "G5", "G6", "G7", "G8", "G9", "G10", "G11", "G12"];
 
-// 2026년 기준 초4(~10세)~고3(~18세) 출생연도 범위
-const BIRTH_YEARS = Array.from({ length: 14 }, (_, i) => 2018 - i); // 2018~2005
+// 2026년 기준 초4(2016년생)~고3(2008년생), 전후 1년 여유
+const BIRTH_YEARS = Array.from({ length: 11 }, (_, i) => 2017 - i); // 2017~2007
 
 function getUtmSource(): string {
   if (typeof window === "undefined") return "";

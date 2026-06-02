@@ -8,7 +8,7 @@ export default function Hero() {
       {/* 배경 키비주얼 */}
       <Image
         src={ASSETS.heroWide}
-        alt=""
+        alt="2026 Harvard Debate Council Workshop Korea 키비주얼"
         fill
         priority
         className="object-cover object-center"
