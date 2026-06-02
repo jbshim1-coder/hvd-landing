@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { ASSETS, LINKS } from "@/lib/content";
 
@@ -20,7 +21,7 @@ export default function Header() {
       }`}
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <a href="/" aria-label="홈으로">
+        <Link href="/" aria-label="홈으로">
           <Image
             src={ASSETS.logo}
             alt="Harvard Debate Council Summer Workshop in Korea"
@@ -29,7 +30,7 @@ export default function Header() {
             className="h-8 w-auto object-contain"
             priority
           />
-        </a>
+        </Link>
 
         <a
           href={LINKS.applyForm}

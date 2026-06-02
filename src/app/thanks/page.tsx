@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { ASSETS } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -28,12 +29,12 @@ export default function ThanksPage() {
           </p>
         </div>
 
-        <a
+        <Link
           href="/"
           className="text-sm text-muted underline underline-offset-2 hover:text-ink transition-colors"
         >
           홈으로 돌아가기
-        </a>
+        </Link>
       </div>
     </div>
   );

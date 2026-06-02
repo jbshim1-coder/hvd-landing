@@ -52,6 +52,7 @@ export default function LeadForm() {
 
     try {
       const res = await fetch(endpoint, { method: "POST", body: data });
+      if (!res.ok) throw new Error(`서버 오류 (${res.status})`);
       const json = await res.json();
       if (json.result === "success") {
         router.push("/thanks");
@@ -67,7 +68,7 @@ export default function LeadForm() {
   }
 
   const inputCls =
-    "w-full px-3 py-2.5 rounded border border-line bg-white text-sm text-ink placeholder:text-muted/60 focus:outline-none focus:ring-2 focus:ring-crimson/30 focus:border-crimson transition-colors";
+    "w-full px-3 py-3 rounded border border-line bg-white text-sm text-ink placeholder:text-muted/60 focus:outline-none focus:ring-2 focus:ring-crimson/30 focus:border-crimson transition-colors";
   const labelCls = "block text-xs font-semibold text-ink mb-1";
   const requiredMark = <span className="text-crimson ml-0.5">*</span>;
 
@@ -85,7 +86,6 @@ export default function LeadForm() {
         <div className="mt-8 bg-white rounded-2xl border-2 border-gold/40 shadow-xl p-6 sm:p-8">
         <form
           onSubmit={handleSubmit}
-          noValidate
           className="mt-8 flex flex-col gap-6"
         >
           {/* 참가자 정보 */}
@@ -334,7 +334,7 @@ export default function LeadForm() {
           </div>
 
           {errorMsg && (
-            <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded px-4 py-3">
+            <p role="alert" className="text-sm text-red-600 bg-red-50 border border-red-200 rounded px-4 py-3">
               {errorMsg}
             </p>
           )}
