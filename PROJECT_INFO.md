@@ -4,7 +4,7 @@
 2026 Harvard Debate Council Summer Workshop in Korea — 랜딩페이지
 
 ## 배포 URL
-- Vercel: (배포 후 기록)
+- Vercel: https://hvd-landing.vercel.app
 
 ## GitHub 저장소
 - https://github.com/jbshim1-coder/hvd-landing
