@@ -36,7 +36,7 @@ export default function Header() {
           href={LINKS.applyForm}
           className="hidden sm:inline-flex items-center px-4 py-2 rounded text-sm font-semibold bg-crimson text-white hover:bg-crimson-dark transition-colors"
         >
-          사전 상담 신청
+          사전 1:1 상담신청
         </a>
       </div>
     </header>

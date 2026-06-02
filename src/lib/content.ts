@@ -20,7 +20,7 @@ export const ASSETS = {
 export const HERO = {
   headline: "미국에 가지 않고, 서울에서 경험하는 2026 Harvard Debate Council Workshop",
   body: "영어를 배우는 것이 아니라, 영어로 생각하는 법을 배웁니다. 하버드 디베이트 카운슬이 직접 운영하는 정통 영어 디베이트 프로그램을 강남에서 만나보세요.",
-  ctaPrimary: "사전 상담 신청하기",
+  ctaPrimary: "사전 1:1 상담신청하기",
   ctaSecondary: "프로그램 알아보기",
 } as const;
 
@@ -79,7 +79,7 @@ export const PILLARS = {
 export const HARVARD_DIFF = {
   eyebrow: "harvard difference",
   headline: "하버드 정통 프로그램, 그대로 한국에서",
-  cta: "사전 상담 신청하기",
+  cta: "사전 1:1 상담신청하기",
   items: [
     "Harvard Debate Council이 직접 기획·운영하는 공식 프로그램",
     "디렉터 Dr. Tripp Rebrovick 및 하버드 코치진 직접 참여",
@@ -87,6 +87,53 @@ export const HARVARD_DIFF = {
     "워크샵 기간 중 TOC Korea 공식 토너먼트 참가, 성적 충족 시 TOC Bid 획득",
     "미국·해외 대학 지원 시 활용 가능한 Leadership & Activity 경험",
     "미국행 항공·숙박비 없이 국내에서 동일 커리큘럼 경험",
+  ],
+} as const;
+
+export const PARTNERS = {
+  eyebrow: "partners",
+  headline: "이 프로그램을 함께 만드는 기관",
+  items: [
+    {
+      abbrev: "HDC",
+      name: "Harvard Debate Council",
+      role: "주최·기획",
+      description:
+        "1892년 설립된 하버드 칼리지의 디베이트 단체로 미국 정상급 디베이트 교육·대회를 이끌어 왔습니다. 본 워크샵의 커리큘럼과 운영 기준을 직접 설계하며 디렉터 Dr. Tripp Rebrovick과 코치진이 참여합니다.",
+      notice: "The Harvard Debate Council is a student organization at Harvard College.",
+    },
+    {
+      abbrev: "ASDA",
+      name: "ASDA KOREA",
+      role: "국내 운영",
+      description:
+        "국내에서 유일하게 Harvard Debate Council과 직접 소통하는 공식 협회로, 프로그램의 국내 도입과 현장 운영·반 편성·상담을 담당합니다.",
+      notice: undefined,
+    },
+    {
+      abbrev: "YBM",
+      name: "YBM",
+      role: "행정·운영 지원",
+      description:
+        "국내 대표 영어교육 기업으로, 프로그램의 행정·운영을 지원하고 교육 장소(YBM Biz Center 강남교육연수센터)를 제공합니다.",
+      notice: undefined,
+    },
+    {
+      abbrev: "NSDA",
+      name: "NSDA",
+      role: "후원",
+      description:
+        "National Speech & Debate Association. 미국 최대 규모의 스피치·디베이트 협회입니다.",
+      notice: undefined,
+    },
+    {
+      abbrev: "TOC",
+      name: "Tournament of Champions",
+      role: "토너먼트 연계",
+      description:
+        "미국 디베이트 챔피언십으로, 본 워크샵 참가자에게 TOC Korea 토너먼트 참가 및 시드권(Bid) 기회가 연계됩니다.",
+      notice: undefined,
+    },
   ],
 } as const;
 
@@ -154,7 +201,7 @@ export const FAQ_ITEMS = [
 
 export const LEAD_FORM = {
   eyebrow: "apply now",
-  headline: "사전 상담 신청",
+  headline: "사전 1:1 상담신청",
   subtext:
     "정원 선착순 마감. 신청해 주시면 담당 매니저가 빠르게 연락드려 일정·반 편성·참가 안내를 도와드립니다.",
   notice:

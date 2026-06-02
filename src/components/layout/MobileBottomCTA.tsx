@@ -12,7 +12,7 @@ export default function MobileBottomCTA() {
         href={LINKS.applyForm}
         className="block w-full py-3 rounded text-center text-sm font-bold bg-crimson text-white hover:bg-crimson-dark transition-colors"
       >
-        사전 상담 신청
+        사전 1:1 상담신청
       </a>
     </div>
   );

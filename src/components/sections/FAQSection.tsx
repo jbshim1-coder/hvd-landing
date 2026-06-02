@@ -15,7 +15,7 @@ export default function FAQSection() {
             href={LINKS.applyForm}
             className="inline-flex items-center px-8 py-3 rounded bg-crimson text-white text-sm font-bold hover:bg-crimson-dark transition-colors"
           >
-            사전 상담 신청하기
+            사전 1:1 상담신청하기
           </a>
         </div>
       </div>
