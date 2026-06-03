@@ -67,7 +67,7 @@ export default function LeadForm() {
   }
 
   const inputCls =
-    "w-full px-3 py-3 rounded border border-line bg-white text-sm text-ink placeholder:text-muted/60 focus:outline-none focus:ring-2 focus:ring-crimson/30 focus:border-crimson transition-colors";
+    "w-full px-3 py-3 rounded border border-stroke bg-white text-sm text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-crimson/30 focus:border-crimson transition-colors";
   const labelCls = "block text-xs font-semibold text-ink mb-1";
   const requiredMark = <span className="text-crimson ml-0.5">*</span>;
 

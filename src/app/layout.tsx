@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
+
+const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID;
 
 const SITE_URL = "https://hvd-landing.vercel.app";
 const OG_IMAGE = "https://cdn.imweb.me/upload/S20260406852756e15d93d/95dc82c01f8bc.png";
@@ -68,6 +71,17 @@ export default function RootLayout({
     <html lang="ko" className="h-full scroll-smooth">
       <body className="min-h-full flex flex-col bg-bg text-ink antialiased">
         {children}
+        {GA4_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA4_ID}');`}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );
