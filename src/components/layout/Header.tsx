@@ -32,12 +32,22 @@ export default function Header() {
           />
         </Link>
 
-        <a
-          href={LINKS.applyForm}
-          className="hidden sm:inline-flex items-center px-4 py-2 rounded text-sm font-semibold bg-crimson text-white hover:bg-crimson-dark transition-colors"
-        >
-          사전 1:1 상담신청
-        </a>
+        <div className="hidden sm:flex items-center gap-2">
+          <a
+            href={LINKS.homepage}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-4 py-2 rounded text-sm font-semibold border border-crimson text-crimson hover:bg-crimson hover:text-white transition-colors"
+          >
+            홈페이지
+          </a>
+          <a
+            href={LINKS.applyForm}
+            className="inline-flex items-center px-4 py-2 rounded text-sm font-semibold bg-crimson text-white hover:bg-crimson-dark transition-colors"
+          >
+            사전 1:1 상담신청
+          </a>
+        </div>
       </div>
     </header>
   );
