@@ -3,6 +3,7 @@
 export const LINKS = {
   applyForm: "#apply",
   seminarForm: "https://forms.gle/oxCrL1n9SMxyzoh7A",
+  homepage: "https://hdcsw-rok.com/",
 } as const;
 
 export const ASSETS = {
